@@ -22,7 +22,7 @@ table {
   margin-bottom: 20px; /* Espacio debajo de cada tabla */
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
   table {
     height: 40vh;
     width: 75%;
@@ -135,7 +135,7 @@ input[type="checkbox"]:checked {
   width: 70%; /* Ancho del botón */
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
   #refreshButton {
     width: 75%;
   }

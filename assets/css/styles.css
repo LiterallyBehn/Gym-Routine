@@ -75,28 +75,17 @@ thead {
 
 /* Estilos específicos para la flecha izquierda */
 .left-arrow {
-  position: absolute;
-  left: 0; /* Alinea la flecha izquierda al borde izquierdo de la tabla */
   padding-left: 10px; /* Espaciado desde el lado izquierdo */
 }
 
 /* Estilos específicos para la flecha derecha */
 .right-arrow {
-  position: absolute;
-  right: 0; /* Alinea la flecha derecha al borde derecho de la tabla */
   padding-right: 10px; /* Espaciado desde el lado derecho */
 }
 
 /* Deshabilita eventos de clic en el contenedor table-navigation */
 .table-navigation {
   pointer-events: none; /* Deshabilita todos los eventos de puntero */
-  position: absolute; /* Posiciona las flechas absolutamente dentro del contenedor de las tablas */
-  top: 50%; /* Centra las flechas verticalmente con respecto a la tabla */
-  left: 50%; /* Centra las flechas horizontalmente con respecto a la tabla */
-  transform: translate(-50%, -50%); /* Ajuste fino del centrado */
-  display: flex;
-  justify-content: space-between; /* Espacia las flechas a los extremos */
-  width: calc(100% - 20px); /* Ajusta el ancho para incluir el padding */
 }
 
 /* Habilita eventos de clic en las flechas de navegación */
@@ -111,7 +100,6 @@ input[type="checkbox"]:checked {
 
 /* Ajustes adicionales para el contenedor de las tablas */
 #rutina {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,5 +115,5 @@ input[type="checkbox"]:checked {
   border: none;
   border-radius: 5px;
   font-size: 1em;
-  width: 70%;
+  width: 70%; /* Ancho del botón */
 }

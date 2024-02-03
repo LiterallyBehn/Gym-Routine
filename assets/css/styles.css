@@ -1,54 +1,56 @@
 /* Establece la fuente y el estilo base para el cuerpo del documento */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif; /* Usa la fuente Lato */
   font-weight: 900; /* Aplica Lato Bold */
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  position: relative; /* Contenedor relativo para las flechas absolutas */
+  text-align: center; /* Centra el texto */
+  margin: 0; /* Elimina los márgenes por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  position: relative; /* Establece como contenedor relativo para posicionamiento absoluto de elementos internos */
 }
 
 /* Estilo para el título principal */
 h1 {
-  color: #333;
+  color: #333; /* Color del texto */
 }
 
 /* Estilos generales para todas las tablas */
 table {
-  height: 70vh;
+  height: 70vh; /* Altura de la tabla basada en el alto de la ventana */
   width: 70%; /* Ancho de las tablas */
   border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
   margin-bottom: 20px; /* Espacio debajo de cada tabla */
 }
 
+/* Media query para ajustar el ancho de las tablas en pantallas pequeñas */
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   table {
-    width: calc(100% - 25%);
+    width: calc(
+      100% - 25%
+    ); /* Ajusta el ancho de la tabla en pantallas pequeñas */
   }
 }
 
 /* Estilo para los títulos de las tablas */
 caption {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center; /* Centra el texto en los elementos caption */
-  color: #333;
+  font-size: 1.5em; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  text-align: center; /* Centra el texto */
+  color: #333; /* Color del texto */
 }
 
 /* Estilos para las celdas de las tablas */
 th,
 td {
   border: 1px solid #000; /* Borde de las celdas */
-  padding: 10px;
-  text-align: center; /* Centra el texto en los elementos th y td */
-  color: #333;
+  padding: 10px; /* Relleno dentro de las celdas */
+  text-align: center; /* Centra el texto */
+  color: #333; /* Color del texto */
 }
 
 /* Estilo para el encabezado de las tablas */
 thead {
-  background-color: #f2f2f2; /* Color de fondo para el encabezado de las tablas */
+  background-color: #f2f2f2; /* Color de fondo para el encabezado */
 }
 
 /* Estilos para las tablas ocultas */
@@ -63,7 +65,7 @@ thead {
 /* Contenedor para el botón de refrescar */
 .button-container {
   text-align: center; /* Centra el botón de refrescar */
-  margin-top: 10px;
+  margin-top: 10px; /* Espacio arriba del botón */
 }
 
 /* Contenedor para las flechas de navegación */
@@ -83,7 +85,6 @@ thead {
   position: absolute; /* Posicionamiento absoluto para las flechas */
   top: 50%; /* Centrado vertical */
   transform: translateY(-50%); /* Ajuste fino del centrado vertical */
-  max-width: 32px; /* Tamaño de las flechas */
 }
 
 /* Estilos específicos para la flecha izquierda */
@@ -110,7 +111,7 @@ thead {
 
 /* Cambia el color del check dentro del checkbox */
 input[type="checkbox"]:checked {
-  accent-color: #12372a;
+  accent-color: #12372a; /* Color personalizado para el check */
 }
 
 /* Ajustes adicionales para el contenedor de las tablas */
@@ -118,25 +119,27 @@ input[type="checkbox"]:checked {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centra las tablas verticalmente y horizontalmente */
 }
 
 /* Estilos para el botón de refrescar */
 #refreshButton {
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #12372a;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
+  padding: 10px 20px; /* Relleno del botón */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  background-color: #12372a; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 5px; /* Redondea las esquinas del botón */
+  font-size: 1em; /* Tamaño de fuente del botón */
   width: 70%; /* Ancho del botón */
 }
 
+/* Media query para ajustar el ancho y el borde del botón de refrescar en pantallas pequeñas */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   #refreshButton {
+    /* Ajusta el ancho del botón a la mitad del ancho total de la pantalla */
     width: calc(100% - 50%);
+    /* Redondea los bordes del botón para darle una apariencia de círculo */
     border-radius: 150px;
   }
 }

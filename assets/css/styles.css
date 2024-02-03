@@ -134,13 +134,13 @@ input[type="checkbox"]:checked {
   width: 70%; /* Ancho del botón */
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1024px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   #refreshButton {
     width: calc(100% - 30%);
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 710px) {
+@media only screen and (min-width: 320px) and (max-width: 680px) {
   #refreshButton {
     width: calc(100% - 20%);
   }

@@ -137,6 +137,6 @@ input[type="checkbox"]:checked {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   #refreshButton {
     width: calc(100% - 50%);
-    border-radius: 25%;
+    border-radius: 150px;
   }
 }

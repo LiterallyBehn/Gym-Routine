@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
   // Datos de los ejercicios para cada día
   const rutinaFullBody = [

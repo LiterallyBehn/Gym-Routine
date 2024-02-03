@@ -118,37 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Función para cambiar la tabla visible y ajustar la posición de las flechas
-  function changeTable(next) {
-    tables[currentTableIndex].style.display = "none";
-    currentTableIndex = next ? currentTableIndex + 1 : currentTableIndex - 1;
-    currentTableIndex = Math.max(
-      0,
-      Math.min(currentTableIndex, tables.length - 1)
-    );
-    tables[currentTableIndex].style.display = "table";
-    localStorage.setItem("currentTableIndex", currentTableIndex);
-    centerArrows(); // Llama a la función para centrar las flechas
-  }
-
-  // Función para centrar las flechas de navegación con respecto a la tabla visible
-  function centerArrows() {
-    const tableRect = tables[currentTableIndex].getBoundingClientRect();
-    const leftArrow = document.querySelector(".left-arrow");
-    const rightArrow = document.querySelector(".right-arrow");
-    const navigationContainer = document.querySelector(".table-navigation");
-
-    // Calcula la posición central de la tabla
-    const tableCenter = tableRect.left + tableRect.width / 2;
-    // Centra el contenedor de navegación con respecto a la tabla
-    navigationContainer.style.left = `${tableCenter}px`;
-    navigationContainer.style.transform = "translateX(-50%)";
-
-    // Ajusta la posición de las flechas dentro del contenedor
-    leftArrow.style.left = `${-tableRect.left}px`;
-    rightArrow.style.right = `${document.body.clientWidth - tableRect.right}px`;
-  }
-
   // Eventos de teclado para navegación
   document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowRight") {

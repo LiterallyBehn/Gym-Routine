@@ -5,6 +5,8 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  text-align: center;
+  position: relative; /* Contenedor relativo para las flechas absolutas */
 }
 
 /* Estilo para el título principal */
@@ -14,9 +16,17 @@ h1 {
 
 /* Estilos generales para todas las tablas */
 table {
+  height: 70vh;
   width: 70%; /* Ancho de las tablas */
   border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
   margin-bottom: 20px; /* Espacio debajo de cada tabla */
+}
+
+@media (max-width: 768px) {
+  table {
+    height: 80vh;
+    width: 75%;
+  }
 }
 
 /* Estilo para los títulos de las tablas */
@@ -71,16 +81,22 @@ thead {
 .arrow {
   max-width: 32px; /* Tamaño de las flechas */
   cursor: pointer; /* Cambia el cursor a puntero cuando se pasa sobre las flechas */
+  position: absolute; /* Posicionamiento absoluto para las flechas */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste fino del centrado vertical */
+  max-width: 32px; /* Tamaño de las flechas */
 }
 
 /* Estilos específicos para la flecha izquierda */
 .left-arrow {
   padding-left: 10px; /* Espaciado desde el lado izquierdo */
+  left: 0; /* Alinea la flecha izquierda al borde izquierdo */
 }
 
 /* Estilos específicos para la flecha derecha */
 .right-arrow {
   padding-right: 10px; /* Espaciado desde el lado derecho */
+  right: 0; /* Alinea la flecha derecha al borde derecho */
 }
 
 /* Deshabilita eventos de clic en el contenedor table-navigation */
@@ -108,6 +124,7 @@ input[type="checkbox"]:checked {
 
 /* Estilos para el botón de refrescar */
 #refreshButton {
+  margin-bottom: 10px;
   padding: 10px 20px;
   cursor: pointer;
   background-color: #12372a;
@@ -116,4 +133,10 @@ input[type="checkbox"]:checked {
   border-radius: 5px;
   font-size: 1em;
   width: 70%; /* Ancho del botón */
+}
+
+@media (max-width: 768px) {
+  #refreshButton {
+    width: 75%;
+  }
 }

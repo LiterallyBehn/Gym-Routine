@@ -24,7 +24,7 @@ table {
 
 @media (max-width: 768px) {
   table {
-    height: 60vh;
+    height: 40vh;
     width: 75%;
   }
 }

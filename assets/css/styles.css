@@ -24,8 +24,7 @@ table {
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   table {
-    height: 50vh;
-    width: 30%;
+    width: calc(100% - 42px);
   }
 }
 
@@ -137,6 +136,6 @@ input[type="checkbox"]:checked {
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   #refreshButton {
-    width: 30%;
+    width: calc(100% - 42px);
   }
 }

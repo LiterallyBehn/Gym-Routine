@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       repeticiones: "8-12",
     },
     {
-      ejercicio: "Extension de Codo",
+      ejercicio: "Extensiones de Codo",
       series: "3-4",
       repeticiones: "8-12",
     },

@@ -1,51 +1,133 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Datos de los ejercicios para cada día
   const rutinaFullBody = [
-    { ejercicio: "Press Banca", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Dominadas", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Press Militar", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Elevaciones Laterales", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Extensiones de Codo", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Curl con Mancuerna", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Sentadilla", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Peso Muerto Rumano", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Hip Thrust", series: "2-5", repeticiones: "8-12" },
+    {
+      ejercicio: "Press Banca",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Dominadas",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Press Militar",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Elevaciones Laterales",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Extensiones de Codo",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Curl con Mancuerna",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Sentadilla",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Peso Muerto Rumano",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Hip Thrust",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
     {
       ejercicio: "Elevación de Talón de Pie",
-      series: "2-5",
+      series: "3-4",
       repeticiones: "8-12",
     },
   ];
-
   const rutinaTorso = [
-    { ejercicio: "Press Banca", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Dominadas", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Press Militar", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Fondos", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Remo con Barra", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Elevaciones Laterales", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Extension de Codo", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Curl con Mancuerna", series: "2-5", repeticiones: "8-12" },
+    {
+      ejercicio: "Press Banca",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Dominadas",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Press Militar",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Fondos",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Remo con Barra",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Elevaciones Laterales",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Extension de Codo",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Curl con Mancuerna",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
   ];
-
   const rutinaPierna = [
-    { ejercicio: "Sentadilla", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Peso Muerto Rumano", series: "2-5", repeticiones: "8-12" },
-    { ejercicio: "Hip Thrust", series: "2-5", repeticiones: "8-12" },
+    {
+      ejercicio: "Sentadilla",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Peso Muerto Rumano",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
+    {
+      ejercicio: "Hip Thrust",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
     {
       ejercicio: "Extensiones en Máquina",
-      series: "2-5",
+      series: "3-4",
       repeticiones: "8-12",
     },
-    { ejercicio: "Curl en Máquina", series: "2-5", repeticiones: "8-12" },
+    {
+      ejercicio: "Curl en Máquina",
+      series: "3-4",
+      repeticiones: "8-12",
+    },
     {
       ejercicio: "Elevación de Talón de Pie",
-      series: "2-5",
+      series: "3-4",
       repeticiones: "8-12",
     },
     {
       ejercicio: "Elevación de Talón Sentado",
-      series: "2-5",
+      series: "3-4",
       repeticiones: "8-12",
     },
   ];
@@ -97,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentTableIndex = localStorage.getItem("currentTableIndex")
     ? parseInt(localStorage.getItem("currentTableIndex"), 10)
     : 0;
-  tables[currentTableIndex].style.display = "table"; // Muestra la tabla actual
-
+  tables[currentTableIndex].style.display = "table";
+  // Muestra la tabla actual
   document.querySelector(".left-arrow").addEventListener("click", function () {
     if (currentTableIndex > 0) {
       tables[currentTableIndex].style.display = "none";
@@ -107,7 +189,6 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("currentTableIndex", currentTableIndex);
     }
   });
-
   document.querySelector(".right-arrow").addEventListener("click", function () {
     if (currentTableIndex < tables.length - 1) {
       tables[currentTableIndex].style.display = "none";
@@ -141,5 +222,54 @@ document.addEventListener("DOMContentLoaded", function () {
   refreshButton.addEventListener("click", function () {
     localStorage.clear();
     window.location.reload();
+  });
+
+  // Función para ocultar todas las imágenes
+  function hideAllImages() {
+    const images = document.querySelectorAll(".exercise-image");
+    images.forEach(function (image) {
+      image.style.display = "none";
+    });
+  }
+
+  // Función para mostrar la imagen del ejercicio seleccionado
+  function showExerciseImage(exerciseName) {
+    // Ocultamos todas las imágenes primero
+    hideAllImages();
+
+    // Mostramos la imagen correspondiente al ejercicio seleccionado
+    const imageToShow = document.querySelector(`#${exerciseName}-image`);
+    if (imageToShow) {
+      imageToShow.style.display = "block";
+
+      // Ocultamos la imagen después de 20 segundos
+      setTimeout(() => {
+        imageToShow.style.display = "none";
+      }, 20000);
+    }
+  }
+
+  // Agregamos el evento de clic a los nombres de los ejercicios
+  const exerciseNames = document.querySelectorAll("#rutina td:first-child");
+  exerciseNames.forEach(function (nameElement) {
+    nameElement.addEventListener("click", function () {
+      const exerciseId = this.textContent
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-");
+      showExerciseImage(exerciseId);
+    });
+  });
+
+  // Agrega imágenes al contenedor de imágenes
+  const exerciseImagesContainer = document.getElementById("exerciseImages");
+  const exercises = [...rutinaFullBody, ...rutinaTorso, ...rutinaPierna];
+  exercises.forEach((exercise) => {
+    const imageName = exercise.ejercicio.toLowerCase().replace(/\s+/g, "-");
+    const img = document.createElement("img");
+    img.src = `assets/media/jpg/Toda_la_Rutina/${imageName}.jpg`;
+    img.classList.add("exercise-image", imageName);
+    img.id = `${imageName}-image`;
+    exerciseImagesContainer.appendChild(img);
   });
 });

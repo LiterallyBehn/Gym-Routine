@@ -143,3 +143,30 @@ input[type="checkbox"]:checked {
     border-radius: 150px;
   }
 }
+
+/* Contenedor para las imágenes de los ejercicios */
+.exercise-images-container {
+  text-align: center; /* Centra las imágenes horizontalmente */
+  margin-top: 20px; /* Espacio arriba del contenedor de imágenes */
+}
+
+/* Estilos para las imágenes de los ejercicios */
+.exercise-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  display: none; /* Oculta las imágenes inicialmente */
+  margin: 0 auto;
+}
+
+/* Media queries para ajustar el tamaño de las imágenes según la resolución de pantalla */
+@media only screen and (max-width: 768px) {
+  .exercise-image {
+    max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .exercise-image {
+    min-width: 355px; /* Tamaño mínimo en pantallas grandes */
+    max-width: 555px; /* Tamaño máximo en pantallas grandes */
+  }
+}

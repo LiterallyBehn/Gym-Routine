@@ -257,7 +257,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .trim()
         .toLowerCase()
         .replace(/\s+/g, "-");
-      showExerciseImage(exerciseId);
+      const imageElement = document.querySelector(`#${exerciseId}-image`);
+      if (imageElement.style.display === "block") {
+        imageElement.style.display = "none";
+      } else {
+        showExerciseImage(exerciseId);
+      }
     });
   });
 

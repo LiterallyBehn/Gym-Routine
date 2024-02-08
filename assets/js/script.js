@@ -180,21 +180,24 @@ document.addEventListener("DOMContentLoaded", function () {
     ? parseInt(localStorage.getItem("currentTableIndex"), 10)
     : 0;
   tables[currentTableIndex].style.display = "table";
-  // Muestra la tabla actual
+
   document.querySelector(".left-arrow").addEventListener("click", function () {
     if (currentTableIndex > 0) {
       tables[currentTableIndex].style.display = "none";
       currentTableIndex--;
       tables[currentTableIndex].style.display = "table";
       localStorage.setItem("currentTableIndex", currentTableIndex);
+      hideAllImages();
     }
   });
+
   document.querySelector(".right-arrow").addEventListener("click", function () {
     if (currentTableIndex < tables.length - 1) {
       tables[currentTableIndex].style.display = "none";
       currentTableIndex++;
       tables[currentTableIndex].style.display = "table";
       localStorage.setItem("currentTableIndex", currentTableIndex);
+      hideAllImages();
     }
   });
 
@@ -206,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentTableIndex++;
         tables[currentTableIndex].style.display = "table";
         localStorage.setItem("currentTableIndex", currentTableIndex);
+        hideAllImages();
       }
     } else if (event.key === "ArrowLeft") {
       if (currentTableIndex > 0) {
@@ -213,6 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
         currentTableIndex--;
         tables[currentTableIndex].style.display = "table";
         localStorage.setItem("currentTableIndex", currentTableIndex);
+        hideAllImages();
       }
     }
   });

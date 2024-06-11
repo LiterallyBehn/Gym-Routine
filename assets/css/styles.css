@@ -19,6 +19,7 @@ table {
   width: 70%; /* Ancho de las tablas */
   border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
   margin-bottom: 20px; /* Espacio debajo de cada tabla */
+  overflow: auto; /* Agrega desplazamiento horizontal a la tabla */
 }
 
 /* Media query para ajustar el ancho de las tablas en pantallas pequeñas */
@@ -91,12 +92,14 @@ thead {
 .left-arrow {
   padding-left: 10px; /* Espaciado desde el lado izquierdo */
   left: 0; /* Alinea la flecha izquierda al borde izquierdo */
+  position: fixed; /* Fija la posición de la flecha izquierda */
 }
 
 /* Estilos específicos para la flecha derecha */
 .right-arrow {
   padding-right: 10px; /* Espaciado desde el lado derecho */
   right: 0; /* Alinea la flecha derecha al borde derecho */
+  position: fixed; /* Fija la posición de la flecha derecha */
 }
 
 /* Deshabilita eventos de clic en el contenedor table-navigation */
@@ -122,9 +125,10 @@ thead {
   .exercise-image {
     max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
   }
+
   .button-container {
     text-align: center; /* Centra el botón de refrescar */
-    margin-top: 2vh; /* Espacio arriba del botón */
+    margin-top: 32px; /* Espacio arriba del botón */
   }
 }
 
@@ -153,7 +157,7 @@ input[type="checkbox"]:checked {
   align-items: center; /* Centra las tablas verticalmente y horizontalmente */
 }
 
-/* Estilos para el botón de refrescar */
+/* Estilo para el botón de refrescar */
 #refreshButton {
   padding: 10px 20px; /* Relleno del botón */
   cursor: pointer; /* Cambia el cursor a puntero */
@@ -162,7 +166,7 @@ input[type="checkbox"]:checked {
   border: none; /* Elimina el borde del botón */
   border-radius: 5px; /* Redondea las esquinas del botón */
   font-size: 1em; /* Tamaño de fuente del botón */
-  width: 70%; /* Ancho del botón */
+  width: 70%; /* Ancho del botón para ocupar todo el espacio disponible */
 }
 
 /* Media query para ajustar el ancho y el borde del botón de refrescar en pantallas pequeñas */

@@ -1,134 +1,119 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Datos de los ejercicios para cada día
-  const rutinaFullBody = [
+  const rutinaPierna = [
     {
-      ejercicio: "Press Banca",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Sentadilla Profunda",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Dominadas",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Extensión de Cuadriceps Lenta",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Press Militar",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Extensión Femoral Lenta",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Elevaciones Laterales",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Elevaciones de Gemelos",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Extensiones de Codo",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Plancha",
+      series: "2",
+      repeticiones: "Al Fallo",
     },
     {
-      ejercicio: "Curl con Mancuerna",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Elevaciones Laterales Lentas",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Sentadilla",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Elevaciones Frontales con Disco",
+      series: "4",
+      repeticiones: "8",
+    },
+  ];
+  const rutinaEspalda = [
+    {
+      ejercicio: "Jalon al Pecho Alto",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Peso Muerto Rumano",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Remo Unilateral con Mancuerna",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Hip Thrust",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Remo con Barra",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Elevación de Talón de Pie",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Curl de Biceps Unilateral",
+      series: "4",
+      repeticiones: "8",
+    },
+    {
+      ejercicio: "Curl Martillo",
+      series: "4",
+      repeticiones: "8",
+    },
+    {
+      ejercicio: "Curl con Barra",
+      series: "3",
+      repeticiones: "8",
+    },
+    {
+      ejercicio: "Curl Invertido con Barra",
+      series: "4",
+      repeticiones: "8",
+    },
+    {
+      ejercicio: "Elevaciones Laterales Lentas",
+      series: "4",
+      repeticiones: "8",
+    },
+    {
+      ejercicio: "Elevaciones Frontales con Disco",
+      series: "4",
+      repeticiones: "8",
     },
   ];
   const rutinaTorso = [
     {
-      ejercicio: "Press Banca",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Press Banca Plano",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Dominadas",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Press Banca Inclinado",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Press Militar",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Extensión de Triceps Lenta",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Fondos",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Extensión sobre la Cabeza",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Remo con Barra",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Elevaciones Laterales Lentas",
+      series: "4",
+      repeticiones: "8",
     },
     {
-      ejercicio: "Elevaciones Laterales",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Extensiones de Codo",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Curl con Mancuerna",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-  ];
-  const rutinaPierna = [
-    {
-      ejercicio: "Sentadilla",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Peso Muerto Rumano",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Hip Thrust",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Extensiones en Máquina",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Curl en Máquina",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Elevación de Talón de Pie",
-      series: "3-4",
-      repeticiones: "8-12",
-    },
-    {
-      ejercicio: "Elevación de Talón Sentado",
-      series: "3-4",
-      repeticiones: "8-12",
+      ejercicio: "Elevaciones Frontales con Disco",
+      series: "4",
+      repeticiones: "8",
     },
   ];
 
@@ -160,18 +145,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Agregar ejercicios a las tablas
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(1) tbody"),
-    rutinaFullBody,
-    "fullbody"
+    rutinaPierna,
+    "pierna"
   );
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(2) tbody"),
-    rutinaTorso,
-    "torso"
+    rutinaEspalda,
+    "espalda"
   );
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(3) tbody"),
-    rutinaPierna,
-    "pierna"
+    rutinaTorso,
+    "torno"
   );
 
   // Navegación entre tablas
@@ -273,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Agrega imágenes al contenedor de imágenes
   const exerciseImagesContainer = document.getElementById("exerciseImages");
-  const exercises = [...rutinaFullBody, ...rutinaTorso, ...rutinaPierna];
+  const exercises = [...rutinaPierna, ...rutinaEspalda, ...rutinaTorso];
   exercises.forEach((exercise) => {
     const imageName = exercise.ejercicio.toLowerCase().replace(/\s+/g, "-");
     const img = document.createElement("img");

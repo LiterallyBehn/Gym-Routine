@@ -104,6 +104,37 @@ thead {
   pointer-events: none; /* Deshabilita todos los eventos de puntero */
 }
 
+/* Contenedor para las imágenes de los ejercicios */
+.exercise-images-container {
+  text-align: center; /* Centra las imágenes horizontalmente */
+  margin-top: 20px; /* Espacio arriba del contenedor de imágenes */
+}
+
+/* Estilos para las imágenes de los ejercicios */
+.exercise-image {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  display: none; /* Oculta las imágenes inicialmente */
+  margin: 0 auto;
+}
+
+/* Media queries para ajustar el tamaño de las imágenes según la resolución de pantalla */
+@media only screen and (max-width: 768px) {
+  .exercise-image {
+    max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
+  }
+  .button-container {
+    text-align: center; /* Centra el botón de refrescar */
+    margin-top: 2vh; /* Espacio arriba del botón */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .exercise-image {
+    min-width: 355px; /* Tamaño mínimo en pantallas grandes */
+    max-width: 555px; /* Tamaño máximo en pantallas grandes */
+  }
+}
+
 /* Habilita eventos de clic en las flechas de navegación */
 .table-navigation .arrow {
   pointer-events: auto; /* Habilita eventos de puntero solo para las flechas */
@@ -141,32 +172,5 @@ input[type="checkbox"]:checked {
     width: calc(100% - 50%);
     /* Redondea los bordes del botón para darle una apariencia de círculo */
     border-radius: 150px;
-  }
-}
-
-/* Contenedor para las imágenes de los ejercicios */
-.exercise-images-container {
-  text-align: center; /* Centra las imágenes horizontalmente */
-  margin-top: 20px; /* Espacio arriba del contenedor de imágenes */
-}
-
-/* Estilos para las imágenes de los ejercicios */
-.exercise-image {
-  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
-  display: none; /* Oculta las imágenes inicialmente */
-  margin: 0 auto;
-}
-
-/* Media queries para ajustar el tamaño de las imágenes según la resolución de pantalla */
-@media only screen and (max-width: 768px) {
-  .exercise-image {
-    max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .exercise-image {
-    min-width: 355px; /* Tamaño mínimo en pantallas grandes */
-    max-width: 555px; /* Tamaño máximo en pantallas grandes */
   }
 }

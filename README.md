@@ -1,6 +1,6 @@
 # Gym-Routine
 
-This repository contains the source code for a website that shows a gym routine. The gym routine is inspired by a YouTube video which is called [The best routine to train 3 days a week according to science (Full-Body)!](https://youtu.be/7NbcQ7V_CEk?t=225).
+This repository contains the source code for a website that shows a gym routine. The gym routine is inspired by a [spreadsheet](https://docs.google.com/spreadsheets/d/1V9v_62lq5D7gOyaWyMwHRyCmRHaJqGFtkqabqwG3-kw/edit#gid=0) made by a friend.
 
 ## Contents
 

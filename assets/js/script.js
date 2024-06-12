@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       ejercicio: "Curl con Barra",
-      series: "3",
+      series: "4",
       repeticiones: "8",
     },
     {

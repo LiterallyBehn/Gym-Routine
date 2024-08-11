@@ -19,6 +19,7 @@ table {
   width: 70%; /* Ancho de las tablas */
   border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
   margin-bottom: 20px; /* Espacio debajo de cada tabla */
+  overflow: auto; /* Agrega desplazamiento horizontal a la tabla */
 }
 
 /* Media query para ajustar el ancho de las tablas en pantallas pequeñas */
@@ -91,57 +92,19 @@ thead {
 .left-arrow {
   padding-left: 10px; /* Espaciado desde el lado izquierdo */
   left: 0; /* Alinea la flecha izquierda al borde izquierdo */
+  position: fixed; /* Fija la posición de la flecha izquierda */
 }
 
 /* Estilos específicos para la flecha derecha */
 .right-arrow {
   padding-right: 10px; /* Espaciado desde el lado derecho */
   right: 0; /* Alinea la flecha derecha al borde derecho */
+  position: fixed; /* Fija la posición de la flecha derecha */
 }
 
 /* Deshabilita eventos de clic en el contenedor table-navigation */
 .table-navigation {
   pointer-events: none; /* Deshabilita todos los eventos de puntero */
-}
-
-/* Habilita eventos de clic en las flechas de navegación */
-.table-navigation .arrow {
-  pointer-events: auto; /* Habilita eventos de puntero solo para las flechas */
-}
-
-/* Cambia el color del check dentro del checkbox */
-input[type="checkbox"]:checked {
-  accent-color: #12372a; /* Color personalizado para el check */
-}
-
-/* Ajustes adicionales para el contenedor de las tablas */
-#rutina {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Centra las tablas verticalmente y horizontalmente */
-}
-
-/* Estilos para el botón de refrescar */
-#refreshButton {
-  padding: 10px 20px; /* Relleno del botón */
-  cursor: pointer; /* Cambia el cursor a puntero */
-  background-color: #12372a; /* Color de fondo del botón */
-  color: white; /* Color del texto del botón */
-  border: none; /* Elimina el borde del botón */
-  border-radius: 5px; /* Redondea las esquinas del botón */
-  font-size: 1em; /* Tamaño de fuente del botón */
-  width: 70%; /* Ancho del botón */
-}
-
-/* Media query para ajustar el ancho y el borde del botón de refrescar en pantallas pequeñas */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  #refreshButton {
-    /* Ajusta el ancho del botón a la mitad del ancho total de la pantalla */
-    width: calc(100% - 50%);
-    /* Redondea los bordes del botón para darle una apariencia de círculo */
-    border-radius: 150px;
-  }
 }
 
 /* Contenedor para las imágenes de los ejercicios */
@@ -162,11 +125,56 @@ input[type="checkbox"]:checked {
   .exercise-image {
     max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
   }
+
+  .button-container {
+    text-align: center; /* Centra el botón de refrescar */
+    margin-top: 50px; /* Espacio arriba del botón */
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .exercise-image {
     min-width: 355px; /* Tamaño mínimo en pantallas grandes */
     max-width: 555px; /* Tamaño máximo en pantallas grandes */
+  }
+}
+
+/* Habilita eventos de clic en las flechas de navegación */
+.table-navigation .arrow {
+  pointer-events: auto; /* Habilita eventos de puntero solo para las flechas */
+}
+
+/* Cambia el color del check dentro del checkbox */
+input[type="checkbox"]:checked {
+  accent-color: #12372a; /* Color personalizado para el check */
+}
+
+/* Ajustes adicionales para el contenedor de las tablas */
+#rutina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centra las tablas verticalmente y horizontalmente */
+}
+
+/* Estilo para el botón de refrescar */
+#refreshButton {
+  padding: 10px 20px; /* Relleno del botón */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  background-color: #12372a; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 5px; /* Redondea las esquinas del botón */
+  font-size: 1em; /* Tamaño de fuente del botón */
+  width: 70%; /* Ancho del botón para ocupar todo el espacio disponible */
+}
+
+/* Media query para ajustar el ancho y el borde del botón de refrescar en pantallas pequeñas */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  #refreshButton {
+    /* Ajusta el ancho del botón a la mitad del ancho total de la pantalla */
+    width: calc(100% - 50%);
+    /* Redondea los bordes del botón para darle una apariencia de círculo */
+    border-radius: 150px;
   }
 }

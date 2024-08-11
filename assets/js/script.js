@@ -1,30 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Datos de los ejercicios para cada día
-  const rutinaPierna = [
+  const rutinaTorso = [
     {
-      ejercicio: "Sentadilla Profunda",
+      ejercicio: "Press Banca Plano",
       series: "4",
       repeticiones: "8",
     },
     {
-      ejercicio: "Extensión de Cuadriceps Lenta",
+      ejercicio: "Press Banca Inclinado",
       series: "4",
       repeticiones: "8",
     },
     {
-      ejercicio: "Extensión Femoral Lenta",
+      ejercicio: "Extensión de Triceps Lenta",
       series: "4",
       repeticiones: "8",
     },
     {
-      ejercicio: "Elevaciones de Gemelos",
+      ejercicio: "Extensión sobre la Cabeza",
       series: "4",
       repeticiones: "8",
-    },
-    {
-      ejercicio: "Plancha",
-      series: "2",
-      repeticiones: "Al Fallo",
     },
     {
       ejercicio: "Elevaciones Laterales Lentas",
@@ -37,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       repeticiones: "8",
     },
   ];
+
   const rutinaEspalda = [
     {
       ejercicio: "Jalon al Pecho Alto",
@@ -65,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       ejercicio: "Curl con Barra",
-      series: "3",
+      series: "4",
       repeticiones: "8",
     },
     {
@@ -84,26 +80,31 @@ document.addEventListener("DOMContentLoaded", function () {
       repeticiones: "8",
     },
   ];
-  const rutinaTorso = [
+  const rutinaPierna = [
     {
-      ejercicio: "Press Banca Plano",
+      ejercicio: "Sentadilla Profunda",
       series: "4",
       repeticiones: "8",
     },
     {
-      ejercicio: "Press Banca Inclinado",
+      ejercicio: "Extensión de Cuadriceps Lenta",
       series: "4",
       repeticiones: "8",
     },
     {
-      ejercicio: "Extensión de Triceps Lenta",
+      ejercicio: "Extensión Femoral Lenta",
       series: "4",
       repeticiones: "8",
     },
     {
-      ejercicio: "Extensión sobre la Cabeza",
+      ejercicio: "Elevaciones de Gemelos",
       series: "4",
       repeticiones: "8",
+    },
+    {
+      ejercicio: "Plancha",
+      series: "2",
+      repeticiones: "Al Fallo",
     },
     {
       ejercicio: "Elevaciones Laterales Lentas",
@@ -145,8 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Agregar ejercicios a las tablas
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(1) tbody"),
-    rutinaPierna,
-    "pierna"
+    rutinaTorso,
+    "torso"
   );
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(2) tbody"),
@@ -155,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(3) tbody"),
-    rutinaTorso,
-    "torno"
+    rutinaPierna,
+    "pierna"
   );
 
   // Navegación entre tablas
@@ -258,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Agrega imágenes al contenedor de imágenes
   const exerciseImagesContainer = document.getElementById("exerciseImages");
-  const exercises = [...rutinaPierna, ...rutinaEspalda, ...rutinaTorso];
+  const exercises = [...rutinaTorso, ...rutinaEspalda, ...rutinaPierna];
   exercises.forEach((exercise) => {
     const imageName = exercise.ejercicio.toLowerCase().replace(/\s+/g, "-");
     const img = document.createElement("img");

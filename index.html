@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<!-- Define el tipo de documento como HTML5 -->
 <html lang="es">
-  <!-- Establece el idioma del documento como español -->
   <head>
     <meta charset="UTF-8" />
-    <!-- Define la codificación de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Asegura la responsividad en dispositivos móviles -->
     <title>Rutina de Gimnasio</title>
-    <!-- Título del documento que aparece en la pestaña del navegador -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- Vincula la hoja de estilos CSS externa -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
       rel="stylesheet"
     />
-    <!-- Importa la fuente Lato desde Google Fonts -->
     <link
       rel="shortcut icon"
       href="assets/media/favicon/dumbbell.svg"
       type="image/x-icon"
     />
-    <!-- Favicon: icono que aparece en la pestaña del navegador -->
   </head>
   <body>
     <h1>Rutina de Gimnasio</h1>
-    <!-- Título principal de la página -->
-    <!-- Imágenes que actúan como botones de navegación para cambiar entre tablas -->
-    <img
-      src="assets/media/svg/arrow-left.svg"
-      class="arrow left-arrow"
-      alt="Anterior"
-    />
-    <img
-      src="assets/media/svg/arrow-right.svg"
-      class="arrow right-arrow"
-      alt="Siguiente"
-    />
+    <div class="table-navigation">
+      <img
+        src="assets/media/svg/arrow-left.svg"
+        class="arrow left-arrow"
+        alt="Anterior"
+      />
+      <img
+        src="assets/media/svg/arrow-right.svg"
+        class="arrow right-arrow"
+        alt="Siguiente"
+      />
+    </div>
     <div id="rutina">
-      <!-- Tabla para el día Full-Body con su estructura de cabecera y cuerpo donde se agregarán los ejercicios con JavaScript -->
       <table class="hidden-table">
         <caption>
-          Día de Pecho
+          <span>Día de</span>
+          <img
+            src="assets/media/svg/chest.svg"
+            alt="Pecho"
+            style="max-width: 24px"
+          />
+          <span> , </span>
+          <img
+            src="assets/media/svg/triceps.svg"
+            alt="Tríceps"
+            style="max-width: 24px"
+          />
+          <span> y </span>
+          <img
+            src="assets/media/svg/shoulders.svg"
+            alt="Hombro"
+            style="max-width: 24px"
+          />
         </caption>
         <thead>
           <tr>
@@ -51,14 +59,29 @@
             <th>Hecho</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Los ejercicios se agregarán aquí con JavaScript -->
-        </tbody>
+        <tbody></tbody>
       </table>
-      <!-- Tabla para el día Torso con la misma estructura que la anterior -->
+
       <table class="hidden-table">
         <caption>
-          Día de Espalda
+          <span>Día de</span>
+          <img
+            src="assets/media/svg/back.svg"
+            alt="Espalda"
+            style="max-width: 24px"
+          />
+          <span> , </span>
+          <img
+            src="assets/media/svg/biceps.svg"
+            alt="Bíceps"
+            style="max-width: 24px"
+          />
+          <span> y </span>
+          <img
+            src="assets/media/svg/shoulders.svg"
+            alt="Hombro"
+            style="max-width: 24px"
+          />
         </caption>
         <thead>
           <tr>
@@ -68,14 +91,29 @@
             <th>Hecho</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Los ejercicios se agregarán aquí con JavaScript -->
-        </tbody>
+        <tbody></tbody>
       </table>
-      <!-- Tabla para el día Pierna con la misma estructura que las anteriores -->
+
       <table class="hidden-table">
         <caption>
-          Día de Pierna
+          <span>Día de</span>
+          <img
+            src="assets/media/svg/legs.svg"
+            alt="Pierna"
+            style="max-width: 24px"
+          />
+          <span> , </span>
+          <img
+            src="assets/media/svg/abs.svg"
+            alt="Abdominales"
+            style="max-width: 24px"
+          />
+          <span> y </span>
+          <img
+            src="assets/media/svg/shoulders.svg"
+            alt="Hombro"
+            style="max-width: 24px"
+          />
         </caption>
         <thead>
           <tr>
@@ -85,20 +123,16 @@
             <th>Hecho</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Los ejercicios se agregarán aquí con JavaScript -->
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
-    <!-- Botón para refrescar la página y reiniciar el estado de los checkboxes -->
+
     <div class="button-container">
       <button id="refreshButton">Refrescar</button>
     </div>
-    <!-- Contenedor para las imágenes de los ejercicios -->
-    <div id="exerciseImages" class="exercise-images-container">
-      <!-- Las imágenes se agregarán aquí con JavaScript -->
-    </div>
-    <!-- Vincula el archivo JavaScript externo que contiene la lógica de la página -->
+
+    <div id="exerciseImages" class="exercise-images-container"></div>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -16,16 +16,16 @@
     />
   </head>
   <body>
-    <h1>Rutina de Gimnasio</h1>
-    <div class="table-navigation">
+    <h1 id="main-title">Rutina de Gimnasio</h1>
+    <div id="table-navigation">
       <img
         src="assets/media/svg/arrow-left.svg"
-        class="arrow left-arrow"
+        id="left-arrow"
         alt="Anterior"
       />
       <img
         src="assets/media/svg/arrow-right.svg"
-        class="arrow right-arrow"
+        id="right-arrow"
         alt="Siguiente"
       />
     </div>
@@ -33,22 +33,18 @@
       <table class="hidden-table">
         <caption>
           <span>Día de</span>
-          <img
-            src="assets/media/svg/chest.svg"
-            alt="Pecho"
-            style="max-width: 24px"
-          />
+          <img src="assets/media/svg/chest.svg" alt="Pecho" class="day-icon" />
           <span> , </span>
           <img
             src="assets/media/svg/triceps.svg"
             alt="Tríceps"
-            style="max-width: 24px"
+            class="day-icon"
           />
           <span> y </span>
           <img
             src="assets/media/svg/shoulders.svg"
             alt="Hombro"
-            style="max-width: 24px"
+            class="day-icon"
           />
         </caption>
         <thead>
@@ -65,22 +61,18 @@
       <table class="hidden-table">
         <caption>
           <span>Día de</span>
-          <img
-            src="assets/media/svg/back.svg"
-            alt="Espalda"
-            style="max-width: 24px"
-          />
+          <img src="assets/media/svg/back.svg" alt="Espalda" class="day-icon" />
           <span> , </span>
           <img
             src="assets/media/svg/biceps.svg"
             alt="Bíceps"
-            style="max-width: 24px"
+            class="day-icon"
           />
           <span> y </span>
           <img
             src="assets/media/svg/shoulders.svg"
             alt="Hombro"
-            style="max-width: 24px"
+            class="day-icon"
           />
         </caption>
         <thead>
@@ -97,22 +89,18 @@
       <table class="hidden-table">
         <caption>
           <span>Día de</span>
-          <img
-            src="assets/media/svg/legs.svg"
-            alt="Pierna"
-            style="max-width: 24px"
-          />
+          <img src="assets/media/svg/legs.svg" alt="Pierna" class="day-icon" />
           <span> , </span>
           <img
             src="assets/media/svg/abs.svg"
             alt="Abdominales"
-            style="max-width: 24px"
+            class="day-icon"
           />
           <span> y </span>
           <img
             src="assets/media/svg/shoulders.svg"
             alt="Hombro"
-            style="max-width: 24px"
+            class="day-icon"
           />
         </caption>
         <thead>
@@ -127,7 +115,7 @@
       </table>
     </div>
 
-    <div class="button-container">
+    <div id="button-container">
       <button id="refreshButton">Refrescar</button>
     </div>
 

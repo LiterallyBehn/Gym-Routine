@@ -7,10 +7,6 @@ body {
   position: relative;
 }
 
-h1 {
-  color: #333;
-}
-
 table {
   height: 70vh;
   width: 70%;
@@ -53,40 +49,6 @@ thead {
   margin: 0 auto;
 }
 
-.button-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.table-navigation {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-}
-
-.arrow {
-  max-width: 32px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.left-arrow {
-  padding-left: 10px;
-  left: 0;
-  position: fixed;
-}
-
-.right-arrow {
-  padding-right: 10px;
-  right: 0;
-  position: fixed;
-}
-
 .exercise-images-container {
   text-align: center;
   margin-top: 20px;
@@ -98,14 +60,13 @@ thead {
   margin: 0 auto;
 }
 
+.day-icon {
+  max-width: 24px;
+}
+
 @media only screen and (max-width: 768px) {
   .exercise-image {
     max-width: 250px;
-  }
-
-  .button-container {
-    text-align: center;
-    margin-top: 50px;
   }
 }
 
@@ -120,12 +81,58 @@ input[type="checkbox"]:checked {
   accent-color: #12372a;
 }
 
+#main-title {
+  color: #333;
+}
+
+#button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#table-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+#left-arrow,
+#right-arrow {
+  max-width: 32px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#left-arrow {
+  padding-left: 10px;
+  left: 0;
+  position: fixed;
+}
+
+#right-arrow {
+  padding-right: 10px;
+  right: 0;
+  position: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+  #button-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
 #rutina {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12.5px;
 }
 
 #refreshButton {
@@ -139,7 +146,7 @@ input[type="checkbox"]:checked {
   width: 70%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1025px) {
   #refreshButton {
     width: calc(100% - 50%);
     border-radius: 150px;

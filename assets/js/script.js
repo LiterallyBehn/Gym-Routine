@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       repeticiones: "10",
     },
   ];
-
   const rutinaEspalda = [
     {
       ejercicio: "Jalon al Pecho Alto",
@@ -84,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
       repeticiones: "10",
     },
   ];
-
   const rutinaPierna = [
     {
       ejercicio: "Sentadilla Profunda",
@@ -128,23 +126,20 @@ document.addEventListener("DOMContentLoaded", function () {
       const tr = document.createElement("tr");
       const checkboxId = `chk-${dia}-${index}`;
       tr.innerHTML = `
-                <td>${ejercicio.ejercicio}</td>
-                <td>${ejercicio.series}</td>
-                <td>${ejercicio.repeticiones}</td>
-                <td><input type="checkbox" id="${checkboxId}" class="checkbox"></td>
-            `;
+        <td>${ejercicio.ejercicio}</td>
+        <td>${ejercicio.series}</td>
+        <td>${ejercicio.repeticiones}</td>
+        <td><input type="checkbox" id="${checkboxId}" class="checkbox"></td>
+      `;
       tbody.appendChild(tr);
-
       const checkbox = document.getElementById(checkboxId);
       const checked = localStorage.getItem(checkboxId) === "true";
       checkbox.checked = checked;
-
       checkbox.addEventListener("change", function () {
         localStorage.setItem(checkboxId, checkbox.checked);
       });
     });
   }
-
   agregarEjercicios(
     document.querySelector("#rutina table:nth-child(1) tbody"),
     rutinaTorso,
@@ -160,14 +155,12 @@ document.addEventListener("DOMContentLoaded", function () {
     rutinaPierna,
     "pierna"
   );
-
   const tables = document.querySelectorAll("#rutina table");
   let currentTableIndex = localStorage.getItem("currentTableIndex")
     ? parseInt(localStorage.getItem("currentTableIndex"), 10)
     : 0;
   tables[currentTableIndex].style.display = "table";
-
-  document.querySelector(".left-arrow").addEventListener("click", function () {
+  document.getElementById("left-arrow").addEventListener("click", function () {
     if (currentTableIndex > 0) {
       tables[currentTableIndex].style.display = "none";
       currentTableIndex--;
@@ -176,8 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hideAllImages();
     }
   });
-
-  document.querySelector(".right-arrow").addEventListener("click", function () {
+  document.getElementById("right-arrow").addEventListener("click", function () {
     if (currentTableIndex < tables.length - 1) {
       tables[currentTableIndex].style.display = "none";
       currentTableIndex++;
@@ -186,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
       hideAllImages();
     }
   });
-
   document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowRight") {
       if (currentTableIndex < tables.length - 1) {
@@ -206,7 +197,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-
   const refreshButton = document.getElementById("refreshButton");
   refreshButton.addEventListener("click", function () {
     localStorage.clear();
@@ -222,17 +212,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showExerciseImage(exerciseName) {
     hideAllImages();
-
     const imageToShow = document.querySelector(`#${exerciseName}-image`);
     if (imageToShow) {
       imageToShow.style.display = "block";
-
       setTimeout(() => {
         imageToShow.style.display = "none";
       }, 20000);
     }
   }
-
   const exerciseNames = document.querySelectorAll("#rutina td:first-child");
   exerciseNames.forEach(function (nameElement) {
     nameElement.addEventListener("click", function () {
@@ -248,7 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
   const exerciseImagesContainer = document.getElementById("exerciseImages");
   const exercises = [...rutinaTorso, ...rutinaEspalda, ...rutinaPierna];
   exercises.forEach((exercise) => {
